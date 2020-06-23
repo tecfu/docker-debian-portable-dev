@@ -1,8 +1,8 @@
 FROM debian:sid
 
 RUN apt update -y
-RUN apt install --reinstall ca-certificates
-RUN apt install curl gcc make vim git wget -y
+RUN apt install --reinstall ca-certificates -y
+RUN apt install curl gcc make vim git wget python -y
 RUN git config --global http.sslverify false
 
 # vim config
