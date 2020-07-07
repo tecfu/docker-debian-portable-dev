@@ -17,13 +17,28 @@ cd debian-portable-dev
 docker build --tag dev-docker .
 ```
 
-- To run with `zsh`
+- To run `zsh`
+
+*powershell*
 ```powershell
-docker run -it -v c:/dev-tools/docker-shared:/home dev-docker zsh
+docker run -it -v ${PWD}:/home dev-docker zsh
+```
+
+*bash*
+```sh
+docker run -it -v ${pwd}:/home dev-docker zsh
+```
+
+- To run `bash`
+
+*powershell*
+```powershell
+docker run -it -v ${PWD}:/home dev-docker /bin/bash 
+```
+
+*bash*
+```sh
+docker run -it -v ${pwd}:/home dev-docker /bin/bash 
 ```
 
 
-- To run with `bash`
-```powershell
-docker run -it -v c:/dev-tools/docker-shared:/home dev-docker /bin/bash
-```
